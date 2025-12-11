@@ -6,6 +6,10 @@ import { useAppContext } from "../hooks/useAppContext";
 
 import ClockIcon from "../../assets/icons/clock.svg";
 
+const gap = 8;
+const numCols = 2;
+const itemGap = (gap * (numCols - 1)) / numCols;
+
 export default function IndexView() {
   const router = useRouter();
   const { notes, handleSetCurrentNote } = useAppContext();
@@ -32,11 +36,7 @@ export default function IndexView() {
                   handleSetCurrentNote(item);
                   router.push("/note");
                 }}
-                style={[{
-                  width: "97%",
-                  marginRight: index % 2 === 0 ? "auto" : undefined,
-                  marginLeft: index % 2 === 1 ? "auto" : undefined
-                }, index % 2 ? { paddingRight: 20 } : { paddingLeft: 20 }]}
+                style={styles.button}
               >
                 <View style={styles.cardContainer}>
                   {item.title !== "" ? (
@@ -86,9 +86,13 @@ const styles = StyleSheet.create({
     fontSize: 15,
     textAlign: "justify",
   },
+  button: {
+    paddingHorizontal: 5,
+  },
   listContainer: {
     flex: 1,
     paddingVertical: 20,
+    paddingHorizontal: 15,
   },
   cardContainer: {
     borderTopWidth: 15,
