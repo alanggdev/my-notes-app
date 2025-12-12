@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "my-notes-app",
+    "name": "Mis Notas",
     "slug": "my-notes-app",
     "scheme": "my-notes-app",
     "version": "1.0.0",
@@ -22,13 +22,18 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "predictiveBackGestureEnabled": false,
+      "package": "com.alanggdev.mynotesapp"
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "50871bd5-fb38-496f-9f51-31dfc4b741c8"
+      }
+    },
+    "owner": "alanggdev"
   }
 }
