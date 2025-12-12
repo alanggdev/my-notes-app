@@ -33,8 +33,6 @@ export const AppProvider = ({ children }: any) => {
     const newNote: NoteType = { id, creationDate, ...note };
 
     setNotes((prev) => ([newNote, ...prev]));
-
-    console.log(">>> Nota creada");
   }, []);
 
   const handleUpdateNote = useCallback((id: string, note: NoteType) => {
@@ -43,8 +41,6 @@ export const AppProvider = ({ children }: any) => {
 
   const handleDeleteNote = useCallback((id: string) => {
     setNotes(prev => prev.filter((value) => value.id !== id));
-
-    console.log(">>> Nota actualizada");
   }, []);
 
   const handleSetCurrentNote = useCallback((note: NoteType) => {

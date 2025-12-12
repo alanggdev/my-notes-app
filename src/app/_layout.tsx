@@ -14,7 +14,7 @@ export default function AppLayout() {
   return (
     <AppProvider>
       <AppConsumer>
-        {({ currentNote, handleDeleteNote }) => (
+        {({ currentNote, handleDeleteNote, handleClearCurrentNote }) => (
           <Fragment>
             <StatusBar style="light" backgroundColor="#F8F4E3" />
             <Stack
@@ -33,7 +33,10 @@ export default function AppLayout() {
                         {
                           name: "Agregar",
                           icon: AddIcon,
-                          action: () => router.push("/note"),
+                          action: () => {
+                            handleClearCurrentNote();
+                            router.push("/note");
+                          },
                         },
                       ]}
                     />
