@@ -20,6 +20,7 @@ type ContextType = {
 };
 
 export const AppContext = createContext<ContextType>({} as ContextType);
+export const AppConsumer = AppContext.Consumer;
 
 export const AppProvider = ({ children }: any) => {
   const [isLoading, setIsLoading] = useState(false);
