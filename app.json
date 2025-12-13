@@ -23,7 +23,8 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.alanggdev.mynotesapp"
+      "package": "com.alanggdev.mynotesapp",
+      "permissions": []
     },
     "plugins": [
       "expo-router"
